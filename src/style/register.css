@@ -1,0 +1,269 @@
+body {
+  font-family: HYQiHei-EZS, microsoft yahei, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: #f7f7f7;
+  line-height: 1.6;
+}
+.loading-box {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  margin-left: -24px;
+  margin-top: -24px;
+  display: none;
+}
+#register_wrap {
+  width: 100%;
+  height: 100%;
+}
+#register_wrap .section {
+  width: 860px;
+  min-height: 670px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 80px;
+  overflow: hidden;
+}
+#register_wrap .section .logo-area {
+  margin-top: 60px;
+}
+#register_wrap .section .logo-area .vivo-logo-box {
+  width: 160px;
+  height: 42px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#register_wrap .section .logo-area .vivo-logo-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#register_wrap .section .title-item {
+  margin-top: 30px;
+}
+#register_wrap .section .title-item .title {
+  font-family: HYQiHei-FZS;
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+}
+#register_wrap .section .outer-box {
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+#register_wrap .section .outer-box .inner-box {
+  width: 360px;
+}
+#register_wrap .section .outer-box .inner-box .country-box {
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #dedfe0;
+  font-size: 16px;
+  color: #000;
+  padding-left: 12px;
+  line-height: 48px;
+  position: relative;
+  cursor: pointer;
+}
+#register_wrap .section .outer-box .inner-box .country-box .show-country {
+  height: 46px;
+  position: relative;
+}
+#register_wrap .section .outer-box .inner-box .country-box .show-country .arrow {
+  width: 18.8px;
+  height: 10.2px;
+  float: right;
+  position: absolute;
+  top: 19px;
+  right: 15.2px;
+}
+#register_wrap .section .outer-box .inner-box .country-box .show-country .arrow img {
+  width: 18.8px;
+  height: 10.2px;
+  vertical-align: top;
+}
+#register_wrap .section .outer-box .inner-box .country-box .country-list-box {
+  width: 360px;
+  max-height: 234px;
+  position: absolute;
+  top: 47px;
+  left: -1px;
+  background-color: #fff;
+  overflow: auto;
+  border: 1px solid #dedfe0;
+  border-top: none;
+  z-index: 99;
+}
+#register_wrap .section .outer-box .inner-box .country-box .country-list-box .country-list {
+  width: 360px;
+}
+#register_wrap .section .outer-box .inner-box .country-box .country-list-box .country-list .country-item {
+  height: 39px;
+  width: 360px;
+  border-bottom: 1px solid #dedfe0;
+  padding-left: 17px;
+  line-height: 39px;
+  cursor: pointer;
+}
+#register_wrap .section .outer-box .inner-box .hint {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #999;
+  line-height: 19px;
+}
+#register_wrap .section .outer-box .inner-box .phone-box {
+  margin-top: 15px;
+  height: 48px;
+  border: 1px solid #dedfe0;
+  cursor: pointer;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code {
+  width: 94px;
+  height: 46px;
+  padding-left: 12px;
+  line-height: 46px;
+  font-size: 16px;
+  color: #000;
+  float: left;
+  position: relative;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .show-code {
+  position: relative;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .show-code:after {
+  content: "";
+  width: 13.2px;
+  height: 7.7px;
+  position: absolute;
+  top: 21.3px;
+  right: 19.3px;
+  background: url(https://accountstatic.vivo.com.cn/accountstatic.vivo.com.cn/static/img/arrow-down.42027c9.png) no-repeat;
+  background-size: 100% 100%;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .code-list-box {
+  width: 360px;
+  max-height: 234px;
+  position: absolute;
+  top: 47px;
+  left: -1px;
+  background-color: #fff;
+  overflow: auto;
+  border: 1px solid #dedfe0;
+  border-top: none;
+  z-index: 99;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .code-list-box .code-list {
+  width: 360px;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .code-list-box .code-list .code-item {
+  height: 39px;
+  border-bottom: 1px solid #dedfe0;
+  padding-left: 17px;
+  line-height: 39px;
+  cursor: pointer;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .code-list-box .code-list .code-item div:first-child {
+  float: left;
+  margin-left: 17px;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .phone-code .code-list-box .code-list .code-item div:last-child {
+  float: right;
+  margin-right: 17px;
+}
+#register_wrap .section .outer-box .inner-box .phone-box .input {
+  float: left;
+  width: 264px;
+  font-size: 16px;
+  color: #252525;
+  height: 46px;
+  line-height: 46px;
+}
+#register_wrap .section .outer-box .inner-box .errTip-Box {
+  width: 360px;
+  margin: 0 auto;
+}
+#register_wrap .section .outer-box .inner-box .errTip-Box .errTip {
+  font-size: 14px;
+  color: #ec3f3f;
+  margin-top: 12px;
+  text-align: left;
+}
+#register_wrap .section .outer-box .inner-box .protocol-box {
+  margin-top: 20px;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+}
+#register_wrap .section .outer-box .inner-box .protocol-box .check-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dedfe0;
+  margin-top: 1px;
+  float: left;
+  position: relative;
+}
+#register_wrap .section .outer-box .inner-box .protocol-box .check-box img {
+  width: 14px;
+  height: 10px;
+  position: absolute;
+  top: 4px;
+  left: 1px;
+}
+#register_wrap .section .outer-box .inner-box .protocol-box .span1 {
+  margin-left: 8px;
+  color: #252525;
+}
+#register_wrap .section .outer-box .inner-box .protocol-box .span2 {
+  color: #456fff;
+  cursor: pointer;
+}
+#register_wrap .section .outer-box .inner-box .os-pc-btn {
+  display: block;
+  width: 360px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #456fff;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#418eff, endColorstr=#4566ff);
+  background-image: linear-gradient(90deg, #418eff, #4566ff);
+}
+#register_wrap .foot {
+  width: 100%;
+  height: 54px;
+  margin-top: 135px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 11px;
+  color: #9d9d9d;
+}
+#register_wrap .foot .to-service {
+  text-decoration: none;
+  color: #666;
+}
+#register_wrap .foot .to-service img {
+  width: 18px;
+  height: 15px;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+}
+#register_wrap .foot .to-service .online-person {
+  margin-right: 30px;
+}
+#register_wrap .foot .to-service .phone {
+  width: 12px;
+  height: 16px;
+}
+#register_wrap .foot .copyright {
+  padding: 10px 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}

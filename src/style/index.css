@@ -1,0 +1,548 @@
+body {
+  min-width: 1200px;
+  background-color: #f7f7f5;
+  font: 14px/1.5 "Microsoft Yahei", Arial;
+}
+#content {
+  min-width: 1200px;
+}
+#content .banner {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 0;
+}
+#content .banner .img-list {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#content .banner .img-list > li:first-child {
+  margin-left: 0;
+}
+#content .banner .img-list > li {
+  position: relative;
+  left: -520px;
+  float: left;
+  margin-left: -100%;
+  width: 100%;
+  height: 523px;
+  background: #fff center center no-repeat;
+  opacity: 0;
+}
+#content .banner .img-list > li li > .box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 523px;
+  margin-left: -1280px;
+}
+#content .banner .img-list > li li > .box .structure-module {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#content .banner .img-list > li li > .box .structure-module .sm-wrapper {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+#content .banner .img-list > li li > .box .structure-module .sm-wrapper img {
+  position: absolute;
+  left: -300px;
+  display: block;
+  margin: 0 auto;
+  min-height: 200px;
+}
+#content .banner .img-list img {
+  vertical-align: top;
+  height: 523px;
+}
+#content .banner .img-list .current {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(221, 221, 221, 0.7);
+  opacity: 1;
+}
+#content .banner .thumb-list {
+  margin-top: -25px;
+  height: 25px;
+  line-height: 5px;
+  text-align: center;
+}
+#content .banner .thumb-list li {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 3;
+  height: 3px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 5px;
+  width: 42px;
+}
+#content .bannerList {
+  width: 940px;
+  position: absolute;
+  top: 125px;
+  left: 150px;
+  z-index: 10;
+}
+#content .bannerList nav {
+  padding: 35px 0px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#content .bannerList nav li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px 18px 33px;
+  color: #000;
+}
+#content .bannerList nav li :hover {
+  background-color: white;
+}
+#content .bannerList aside {
+  position: absolute;
+  top: 0px;
+  left: 210px;
+  background-color: white;
+  width: 750px;
+  height: 420px;
+  display: none;
+  z-index: 11;
+  box-sizing: content-box;
+  padding: 17px 50px 47px 17px;
+}
+#content .bannerList aside header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 38px;
+}
+#content .bannerList aside header span:last-child {
+  font-size: 12px;
+  color: #999999;
+}
+#content .bannerList aside .classList1 {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 18px;
+}
+#content .bannerList aside .classList1 li {
+  margin-right: 35px;
+  width: 100px;
+  border-radius: 10px;
+  margin-top: 11px;
+  background: url(../images/back1.jpg) no-repeat;
+  background-size: 160px 50px;
+  text-align: right;
+  line-height: 50px;
+  box-sizing: content-box;
+  padding-right: 60px;
+  position: relative;
+}
+#content .bannerList aside .classList1 li span {
+  display: none;
+  width: 160px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+#content .bannerList aside .classList1 :nth-child(4n) {
+  margin-right: 0px;
+}
+#content .bannerList aside .classList2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 26px;
+}
+#content .bannerList aside .classList2 li {
+  width: 230px;
+  margin-right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+  height: 45px;
+}
+#content .bannerList aside .classList2 li img {
+  height: 45px;
+  margin-right: 10px;
+}
+#content .bannerList aside .classList2 :nth-child(3n) {
+  margin-right: 0px;
+}
+#content .wrapper {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#content .wrapper .floor-list {
+  padding-bottom: 40px;
+}
+#content .wrapper .floor-list .fp {
+  height: 160px !important;
+}
+#content .wrapper .floor-list .fp .box-list {
+  height: 150px !important;
+}
+#content .wrapper .floor-list .fp .box-list .box {
+  width: 293px !important;
+  height: 140px !important;
+}
+#content .wrapper .floor-list .fp .box-list .box a {
+  width: 293px !important;
+  height: 140px !important;
+}
+#content .wrapper .floor-list .fp .box-list .box a > img {
+  width: 100% !important;
+  height: 140px !important;
+  margin-top: 0 !important;
+}
+#content .wrapper .J_promotion-container {
+  position: relative;
+}
+#content .wrapper .J_promotion-container .info {
+  position: relative;
+}
+#content .wrapper .J_promotion-container .info .rush-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+#content .wrapper .J_promotion-container .info .rush-title .rush-logo {
+  width: 82px;
+  height: 26px;
+}
+#content .wrapper .J_promotion-container .info .rush-title .count-down {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #999;
+}
+#content .wrapper .J_promotion-container .info .rush-title .count-down .time {
+  display: inline-block;
+  border-radius: 3px;
+  width: 38px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #EC0404;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 6px;
+}
+#content .wrapper .J_promotion-container .info .more-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+#content .wrapper .J_promotion-container .info .more-wrapper li {
+  float: left;
+}
+#content .wrapper .J_promotion-container .info .more-wrapper li a {
+  margin-left: 22px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+}
+#content .wrapper .J_promotion-container .btn-page {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #A4A4A4;
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+}
+#content .wrapper .J_promotion-container .btn-page .iconshop {
+  font-family: iconshop!important;
+  font-size: 16px;
+  font-style: normal;
+}
+#content .wrapper .J_promotion-container .next {
+  left: 1220px !important;
+}
+#content .wrapper .J_promotion-container .swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box {
+  width: 292.5px !important;
+  height: 380px !important;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 0;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.2s linear;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .corner-img {
+  position: absolute;
+  right: 50px;
+  top: 28px;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box > a {
+  display: block;
+  width: 292.5px !important;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box > a .prod-img {
+  width: 172px;
+  height: 172px;
+  margin-top: 41px;
+  position: relative;
+  vertical-align: top;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info {
+  padding: 0 20px;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info p {
+  text-align: center;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 16px;
+  color: #333;
+  font-size: 16px;
+  line-height: 30px;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info .desc {
+  line-height: 17px;
+  height: 17px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info .price {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #f51919;
+  font-size: 16px;
+  line-height: 1;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info .price dfn {
+  font-size: 14px;
+  line-height: 20px;
+}
+#content .wrapper .J_promotion-container .swiper-container .swiper-wrapper .box .prod-info .price .disabled {
+  margin-left: 6px;
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 14px;
+}
+#content .wrapper .floor-list {
+  width: 1200px;
+}
+#content .wrapper .floor-list li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+#content .wrapper .floor-list li .info {
+  position: relative;
+}
+#content .wrapper .floor-list li .info .subject {
+  padding: 38px 0 25px;
+  color: #333;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+}
+#content .wrapper .floor-list li .box-list {
+  display: inline-block;
+  width: 100%;
+  line-height: 0;
+  text-align: justify;
+}
+#content .wrapper .floor-list li .box-list .box {
+  width: 394px;
+  height: 511px;
+  position: relative;
+  transition: 0.5s;
+  top: 0px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+  font-size: 0;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.2s linear;
+}
+#content .wrapper .floor-list li .box-list .box:last-of-type {
+  margin-right: 0;
+}
+#content .wrapper .floor-list li .box-list .box > a {
+  display: block;
+}
+#content .wrapper .floor-list li .box-list .box > a > img {
+  position: relative;
+  vertical-align: top;
+  margin-top: 58px;
+  width: 230px;
+  height: 230px;
+}
+#content .wrapper .floor-list li .box-list .box .color-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 0;
+  text-align: center;
+  background-color: #fff;
+}
+#content .wrapper .floor-list li .box-list .box .color-wrapper .name {
+  padding-top: 29px;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: #333;
+  line-height: 30px;
+}
+#content .wrapper .floor-list li .box-list .box .prodinfo {
+  position: relative;
+}
+#content .wrapper .floor-list li .box-list .box .prodinfo .name {
+  padding-top: 29px;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: #333;
+  line-height: 30px;
+}
+#content .wrapper .floor-list li .box-list .box .prodinfo .feature {
+  padding: 8px 50px 53px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  height: 24px;
+  color: #333;
+  line-height: 24px;
+}
+#content .wrapper .floor-list li .box-list .box .prodinfo .price {
+  font-size: 18px;
+  color: #f51919;
+  line-height: 1;
+}
+#content .wrapper .floor-list li .box-list .box .prodinfo .rmb-symbol:before {
+  content: "\00a5";
+  margin-right: 2px;
+  color: #f51919;
+  font-size: 14px;
+  font-family: "Avenir Roman", "Microsoft YaHei", "微软雅黑";
+}
+#content .wrapper .floor-list li .box-list .box:hover {
+  /* 用定位解决向上移动了一点点，有种立体的感觉 */
+  top: -2px;
+  box-shadow: -4px 4px 10px #ccc, 2px 4px 10px #ccc;
+}
+#content .wrapper .floor-list li .box-list:after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+#content .wrapper .floor-list .pc_6 .box,
+#content .wrapper .floor-list .c_8 .box {
+  width: 293px !important;
+  height: 380px !important;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+  font-size: 0;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.2s linear;
+}
+#content .wrapper .floor-list .pc_6 .box > a > img,
+#content .wrapper .floor-list .c_8 .box > a > img {
+  margin-top: 43px !important;
+  width: 172px !important;
+  height: 172px !important;
+}
+#content .wrapper .floor-list .pc_6 .box:last-of-type,
+#content .wrapper .floor-list .c_8 .box:last-of-type {
+  margin-right: 0px !important;
+}
+#content .wrapper .floor-list .pc_6 .name,
+#content .wrapper .floor-list .c_8 .name {
+  font-size: 16px !important;
+}
+#content .wrapper .floor-list .pc_6 .feature,
+#content .wrapper .floor-list .c_8 .feature {
+  font-size: 12px !important;
+}
+#content .wrapper .floor-list .pc_6 .price,
+#content .wrapper .floor-list .c_8 .price {
+  font-size: 16px !important;
+}
+#content .wrapper .floor-list .pc_6 .box:first-child {
+  width: 594px !important;
+}
+#content .wrapper .floor-list .pc_6 .box:first-child:first-child > a > img {
+  width: 100% !important;
+  height: 380px !important;
+  margin: 0 !important;
+  width: 100%;
+  position: relative;
+  vertical-align: top;
+}
+#content .wrapper .floor-list .c_8 .more-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+#content .wrapper .floor-list .c_8 .more-wrapper li {
+  float: left;
+}
+#content .wrapper .floor-list .c_8 .more-wrapper li a {
+  margin-left: 22px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+  float: left;
+}
+#content .wrapper .floor-list .c_8 .more-wrapper li a:hover {
+  color: red !important;
+}
+#content .wrapper .floor-list .c_8 i {
+  font-size: 11px;
+}

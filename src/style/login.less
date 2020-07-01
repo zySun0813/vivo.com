@@ -1,0 +1,402 @@
+body{
+    font-family: HYQiHei-EZS,microsoft yahei,Helvetica Neue,Helvetica,Tahoma,sans-serif;
+    font-size: 12px; 
+    background-color: rgb(247, 247, 247);
+    line-height: 1.6;
+}
+.loading-box {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -24px;
+    display: none;
+}
+#login_wrap{
+    width: 100%;
+    height: 970px;
+    .login{
+        background-color: rgb(185, 211, 248);
+        width: 100%;
+        height: 780px;
+        .banner{
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            .logo{
+                position: absolute;
+                top: 0;
+                left: 243px;
+                a{
+                    display: block;
+                    height: 52px;
+                    width: 145px;
+                    background-image: url(../img/logo.png);
+                    background-size: 100% 100%;
+                }
+            }
+            .layout{
+                position: absolute;
+                top: 74px;
+                right: 0;
+                width: 420px;
+                // height: 618px;
+                background-color: #fff;
+                .innerbox{
+                    padding: 30px 30px 20px;
+                    min-height: 513px;
+                    .logo-top{
+                        width: 160px;
+                        height: 42px;
+                        margin: auto;
+                        cursor: pointer;
+                        >img{
+                            width: 100%;
+                            height: 100%;
+                            vertical-align: middle;
+                        }
+                    }
+                    .tilte{
+                        margin-top: 15px;
+                        font-family: HYQiHei-FZS;
+                        font-size: 19px;
+                        font-weight: 400;
+                        font-stretch: normal;
+                        letter-spacing: 0;
+                        color: #000;
+                        text-align: center;
+                    }
+                    .toggle-module{
+                        text-align: right;
+                        font-size: 14px;
+                        color: #456fff;
+                        margin-top: 20px;
+                    }
+                   .phone-box{
+                        margin-top: 15px;
+                        width: 360px;
+                        height: 48px;
+                        border: 1px solid #dedfe0;
+                        .phone-code{
+                            float: left;
+                            position: relative;
+                            width: 74px;
+                            .code-item{
+                                display: block;
+                                height: 48px;
+                                line-height: 48px;
+                                padding-left: 12px;
+                                font-size: 16px;
+                                color: #000;
+                                text-align: left;
+                                cursor: pointer;
+                           }
+                            .icon-arrow-down{
+                                content: "";
+                                position: absolute;
+                                top: 21px;
+                                left: 61px;
+                                width: 14px;
+                                height: 9px;
+                                background: url(https://accountstatic.vivo.com.cn/accountstatic.vivo.com.cn/static/img/arrow-down.42027c9.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                       }
+                       .country-list-box{                        
+                            width: 360px;
+                            max-height: 204px;
+                            position: relative;
+                            background-color: #fff;
+                            overflow: auto;
+                            border: 1px solid #dedfe0;
+                            border-top: none;
+                            z-index: 3;
+                            left: -1px;
+                            top: -1px;
+                            .country-item{
+                                font-size: 14px;
+                                height: 40px;
+                                padding-left: 20px;
+                                border-bottom: 1px solid #dedfe0;
+                                line-height: 39px;
+                                cursor: pointer;
+                            }
+                        }
+                       .input{
+                            width: 274px;
+                            float: left;
+                            padding-left: 20px;
+                           
+                       }
+                   }
+                   .input{
+                        height: 46px;
+                        font-size: 16px;
+                        color: #000;
+                   }
+                   .email-box{
+                        margin-top: 15px;
+                        width: 360px;
+                        height: 48px;
+                        border: 1px solid #dedfe0;
+                        .input{
+                            width: 100%;
+                            float: left;
+                            padding-left: 12px;
+                        }
+                   }
+                   .pwd-box{
+                        margin-top: 15px;
+                        width: 360px;
+                        height: 48px;
+                        border: 1px solid #dedfe0;
+                        position: relative;
+                        .input{
+                            padding: 0 48px 0 12px;
+                            width: 100%;
+                        }
+                        .eye-box{
+                            position: absolute;
+                            right: 15px;
+                            top: 15px;
+                            width: 21px;
+                            height: 18px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                   }
+                   .code-box{
+                        margin-top: 15px;
+                        height: 48px;
+                        line-height: 48px;
+                        padding-left: 12px;
+                        border: 1px solid #dedfe0;
+                        .input{
+                            float: left;
+                            width: 226px;
+                            height: 46px;
+                            line-height: 46px;
+                            font-size: 16px;
+                        }
+                        .ellipsis {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            -o-text-overflow: ellipsis;
+                        }
+                        .get-code-pc {
+                            position: relative;
+                            float: right;
+                            width: 120px;
+                            padding-left: 8px;
+                            padding-right: 8px;
+                            text-align: center;
+                            font-size: 15px;
+                            >span {
+                                display: inline-block;
+                                height: 100%;
+                            }
+                            .get {
+                                color: #456fff;
+                                cursor: pointer;
+                            }
+                            .separator {
+                                position: absolute;
+                                top: 7px;
+                                left: 0;
+                                width: 1px;
+                                height: 33px;
+                                padding: 0;
+                                background-color: #dedfe0;
+                            }
+                        }
+                    }
+                   .errTip-Box{
+                        width: 360px;
+                        margin: 0 auto;
+                        .errTip{
+                            font-size: 14px;
+                            color: #ec3f3f;
+                            margin-top: 12px;
+                            text-align: left;
+                        }
+                   }
+                   .check-box{
+                        margin-top: 19px;
+                        font-size: 14px;
+                        .toggle{
+                            float: left;
+                            color: #456fff;
+                            cursor: pointer;
+                        }
+                        .auto-login{
+                            color: #666;
+                            float: right;
+                            .check{
+                                width: 18px;
+                                height: 18px;
+                                background-color: #fff;
+                                border: 1px solid #dedfe0;
+                                float: left;
+                                margin-right: 5px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .os-pc-btn {
+                        display: block;
+                        width: 360px;
+                        height: 48px;
+                        line-height: 48px;
+                        font-size: 17px;
+                        color: #fff;
+                        text-align: center;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        cursor: pointer;
+                        background-color: #456fff;
+                        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#418eff,endColorstr=#4566ff);
+                        background-image: linear-gradient(90deg,#418eff,#4566ff);
+                        
+                    }
+                    .register-button{
+                        width: 360px;
+                        height: 48px;
+                        line-height: 48px;
+                        border: 1px solid #456fff;
+                        color: #456fff;
+                        font-size: 17px;
+                        text-align: center;
+                        margin-top: 15px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #d4dffa;
+                        }
+                    }
+                    .hint3{
+                        margin-top: 15px;
+                        font-size: 13px;
+                        color: #999;
+                    }
+                    .forget-pwd{
+                        font-size: 14px;
+                        color: #666;
+                        text-align: center;
+                        margin-top: 20px;
+                        cursor: pointer;
+                    }
+                    .other-way-login{
+                        margin-top: 30px;
+                        color: #999;
+                        font-size: 13px;
+                        text-align: center;
+                        .o-title{
+                            position: relative;
+                            &:before {
+                                content: "";
+                                width: 130px;
+                                height: 1px;
+                                background-color: #ccc;
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                            }
+                            &:after {
+                                content: "";
+                                width: 130px;
+                                height: 1px;
+                                background-color: #ccc;
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                            }
+                        }
+                        .icon-box{
+                            text-align: center;
+                            margin-top: 15px;
+                            .icon-item:first-child {
+                                margin-left: 0;
+                            }
+                            .icon-item{
+                                width: 26px;
+                                height: 26px;
+                                display: inline-block;
+                                margin-left: 18px;
+                                .img-weixin,.img-zhifubao,.img-weibo,.img-renren{
+                                    width: 26px;
+                                    height: 26px;
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                    display: block;
+                                    cursor: pointer;
+                                }
+                                .img-weixin{                                    
+                                    background-image: url(../img/weixin.png);   
+                                    &:hover{
+                                        background-image: url(../img/weixin-hover.png) !important;         
+                                    }                                 
+                                }
+                                .img-zhifubao{                            
+                                    background-image: url(../img/zhifubao.png);       
+                                    &:hover{
+                                        background-image: url(../img/zhifubao-hover.png) !important;         
+                                    }                              
+                                }
+                               .img-weibo{                                  
+                                    background-image: url(../img/weibo.png);       
+                                    &:hover{
+                                        background-image: url(../img/weibo-hover.png) !important;         
+                                    }                              
+                                }
+                                .img-renren{                                   
+                                    background-image: url(../img/renren.png);       
+                                    &:hover{
+                                        background-image: url(../img/renren-hover.png) !important;         
+                                    }                              
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    .foot{
+        width: 100%;
+        height: 54px;
+        margin-top: 135px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 11px;
+        color: #9d9d9d;
+        .to-service{
+            text-decoration: none;
+            color: #666;
+            img{
+                width: 18px;
+                height: 15px;
+                vertical-align: text-bottom;
+                margin-right: 10px;
+            }
+            .online-person{
+                margin-right: 30px;
+            }
+            .phone{
+                width: 12px;
+                height: 16px;
+            }
+        }
+        .copyright{
+            padding: 10px 0;
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+    }
+}

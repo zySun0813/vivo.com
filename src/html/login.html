@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/login.css">
+
+</head>
+
+<body>
+    <div id="login_wrap">
+        <!-- 登录页面的主体部分 -->
+        <div class="login">
+            <div class="banner">
+                <img src="../img/login_bg.jpg" alt="login_bg">
+                <div class="logo">
+                    <a href="https://www.vivo.com.cn/" target="_blank"></a>
+                </div>
+                <div class="layout">
+                    <div class="innerbox">
+                        <div class="logo-top">
+                            <img src="../img/logo2.png" alt="">
+                        </div>
+                        <h2 class="tilte">短信验证码登录</h2>
+                        <div class="toggle-module">
+                            <span>
+                                帐号登录
+                            </span>
+                        </div>
+                        <div class="login-info">
+                            <div class="input-area">
+                                <!-- 输入手机号 -->
+                                <div class="phone-box">
+                                    <div class="phone-code">
+                                        <span class="code-item">+86</span>
+                                        <i class="icon-arrow-down"></i>
+                                    </div>
+                                    <input type="text" placeholder="请输入手机号" class="input">
+                                    <!-- 区号列表 -->
+                                    <div class="country-list-box" style="display: none;">
+                                        <ul class="country-list">
+                                            <li index="0" class="country-item">
+                                                <span>中国</span>
+                                                <span>+86</span>
+                                            </li>
+                                            <li index="1" class="country-item">
+                                                <span>India</span>
+                                                <span>+91</span>
+                                            </li>
+                                            <li index="1" class="country-item">
+                                                <span>Indonesia</span>
+                                                <span>+62</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 邮箱登录 -->
+                                <div class="email-box" style="display: none;">
+                                    <input type="text" placeholder="请输入邮箱/用户名" class="input">
+                                </div>
+                                <!-- 密码框 -->
+                                <div class="pwd-box" style="display: none;">
+                                    <input type="password" placeholder="请输入密码" autocomplete="off" class="input">
+                                    <div class="eye-box">
+                                        <img src="../img/eyes-off.png" alt="">
+                                    </div>
+                                </div>
+                                <!-- 输入验证码 -->
+                                <div class="code-box clearfix">
+                                    <input type="text" password="false" placeholder="请输入验证码" class="input">
+                                    <div class="get-code-pc ellipsis">
+                                        <span class="get"> 获取验证码 </span>
+                                        <span class="separator"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--错误提示-->
+                        <div class="errTip-Box" style="display: none;">
+                            <div class="errTip"></div>
+                        </div>
+                        <!-- 邮箱登录 -->
+                        <div class="check-box clearfix">
+                            <div style="display: none;">
+                                <div class="toggle">邮箱/用户名登录</div>
+                                <div class="toggle" style="display: none;">手机号登录</div>
+                            </div>
+                            <!--自动登录-->
+                            <div class="auto-login">
+                                <div class="check">
+                                    <img src="./登录_files/selected-icon.png" style="display: none;">
+                                </div>
+                                <span>两周内自动登录</span>
+                            </div>
+                        </div>
+                        <!-- 登录按钮 -->
+                        <div class="os-pc-btn">登录</div>
+                        <!--注册按钮-->
+                        <div class="register-button">注册vivo帐号</div>
+                        <div class="hint3">
+                            短信可能会有延时，请耐心等待，如果长时间未收到短信，请60秒后重新获取
+                        </div>
+                        <!--忘记密码-->
+                        <div class="forget-pwd">忘记密码</div>
+                        <div class="other-way-login">
+                            <div class="o-title ">其它方式登录</div>
+                            <div class="icon-box clearfix ">
+                                <div class="icon-item ">
+                                    <div class="img-weixin"></div>
+                                </div>
+                                <div class="icon-item ">
+                                    <div class="img-zhifubao"></div>
+                                </div>
+                                <div class="icon-item ">
+                                    <div class="img-weibo"></div>
+                                </div>
+                                <div class="icon-item ">
+                                    <div class="img-renren"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 登录页面的底部 -->
+        <div class="foot">
+            <div class="service">
+                <a href="https://kefu.vivo.com.cn/robot-vivo/pcChat.html" target="_blank" class="to-service">
+                    <img src="../img/message-gray.png" alt="">
+                    <span class="online-person"> 在线客服</span>
+                </a>
+                <a class="to-service">
+                    <img src="../img/call.png" alt="" class="phone">
+                    <span class="hot-line"> 400-678-9688(24小时全国服务热线)</span>
+                </a>
+            </div>
+            <div class="copyright">
+                COPYRIGHT ©2020 广东步步高电子工业有限公司 版权所有 保留一切权利 | 隐私政策 | 法律声明 | 粤B2-20080267 | 粤ICP备05100288号
+            </div>
+        </div>
+    </div>
+    <div class="loading-box" style="display: none;"><img width="48px" height="48px"></div>
+
+</body>
+
+</html>

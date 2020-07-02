@@ -73,10 +73,19 @@ define(['jquery', 'cookie'], function($, cookie) {
                 shop.push(product); // 放入商品
             }
             // console.log(num);
-            if (num == 0) {
-                // console.log(num);
-                shop.pop(product);
-            }
+            // if (num == 0) {
+            //     // console.log(num);
+            //     shop.pop(product);
+            // }
+            // let flag = -1;
+            // shop.forEach(function(elm, i) {
+            //     if (elm.id == id) {
+            //         flag = i;
+            //     }
+            // });
+            shop = shop.filter(function(elm) {
+                return elm.num != 0;
+            })
             cookie.set('shop', JSON.stringify(shop), 1);
         },
         listMove: function() {

@@ -264,10 +264,10 @@ dfn {
   transform: translateZ(0);
 }
 #vivo-head-wrap .vp-head-mainbar-pc .vp-head-menu-series {
-  display: none;
   position: absolute;
   width: 100%;
-  height: 324px;
+  height: 0px;
+  transition: 0.3s;
   overflow: hidden;
   background-color: #FFF;
 }

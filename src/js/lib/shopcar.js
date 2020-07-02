@@ -5,11 +5,30 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
         //渲染购物车
         render: function() {
             let shop = cookie.get('shop'); //   获取cookie数据
-
+            console.log(shop);
             if (shop) {
+                // console.log(shop.length);
+                // if (shop.length == 0) {
+                //     $('.shop-table').html('空空如也！');
+                // }
                 shop = JSON.parse(shop);
+                // console.log(res);
+
                 let idlist = shop.map(elm => elm.id).join();
                 console.log(idlist);
+                if (!idlist) {
+                    let nullCar = ` 
+                            <div class="no-result">
+                                <div><img src="../img/no-result.50507a32.png"></div>
+                                <div class="no-result-des">哎呀，购物车为空！</div>
+                                <div class="no-result-btn-container">
+                                    <button class="v-btn v-btn--brand">  去选购逛逛</button>
+                                    <button class="v-btn v-btn--brand">  我的收藏</button>
+                                </div>
+                            </div>
+                    `;
+                    $('.shop-table').html(nullCar);
+                }
                 $.ajax({
                     type: "get",
                     url: `${baseUrl}/interface/shop.php`,
@@ -63,10 +82,7 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                         `;
 
                         });
-                        // console.log(res);
-                        if (res.length == 0) {
-                            $('.shop-table').html('空空如也！');
-                        }
+
                         $('.shop-table').html(tempstr);
                     }
                 });
@@ -149,18 +165,42 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                     $('.red').html(sumNum - num);
                     $('.zongji').html(sumPrice - xiaoji);
                 }
+                location.reload();
             })
 
             //删除所有选中的产品
-            //思路：1、首先要获取所有选中的商品，遍历得到选中商品的数量和小计，在总计中减去这些数量和小计
+            //思路：1、删除完所有选中的产品后，总计那里的价格和数量自动为0
             //2、要实现DOM界面的删除、以及cookie中存储数据的删除
             $('.allDelete').on('click', function() {
-                var sum = Array.from($('.shop-table .total-price'));
-                var num = Array.from($('.shop-table .prod-num'));
-                console.log($('.shop-table tr').find('.checkbox'));
-                if ($('.shop-table tr').find('.checkbox')) {
-                    // let 
-                }
+                // let pro = Array.from($('.shop-table tr').find('.checkbox'));
+                // let delSum = 0;
+                // let delNum = 0;
+                // pro.forEach(elm => {
+                //     if ($(elm).prop('checked')) {
+
+                //         delSum = delSum + +($(elm).parents('tr').find('.price-col').html());
+                //         delNum = delNum + +($(elm).parents('tr').find('.prod-num').val());
+                //     }
+                // })
+                // let sumPriceD = $('.zongji').html();
+                // let sumNumD = $('.red').html();
+
+                //数量和总计自动为0，因为此时已经没有选择的商品了
+                $('.red').html(0);
+                $('.zongji').html(0);
+
+                //实现DOM界面的删除
+                let pro = Array.from($('.shop-table tr').find('.checkbox'));
+
+                pro.forEach(elm => {
+                    if ($(elm).prop('checked')) {
+                        let id = $(elm).parents('tr').find('.prod-id').html();
+                        let delPrice = $(elm).parents('tr').find('.price-col').html();
+                        $(elm).parents('tr').remove();
+                        details.addItem(id, delPrice, 0);
+                    }
+                })
+                location.reload();
             })
         },
         //计算总价

@@ -10,6 +10,54 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+#content .wrapper .no-result {
+  height: 452px;
+  background-color: #fff;
+  text-align: center;
+}
+#content .wrapper .no-result img {
+  width: 189px;
+  height: 144px;
+  margin-top: 76px;
+}
+#content .wrapper .no-result .no-result-des {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+  line-height: 22.5px;
+}
+#content .wrapper .no-result .no-result-btn-container {
+  margin-top: 40px;
+}
+#content .wrapper .no-result .no-result-btn-container .v-btn:first-child {
+  margin-right: 60px;
+}
+#content .wrapper .no-result .no-result-btn-container .v-btn {
+  display: inline-block;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-right: 27px;
+  user-select: none;
+  outline: none;
+  border: none;
+  width: 190px;
+  margin-right: 0;
+  cursor: pointer;
+}
+#content .wrapper .no-result .no-result-btn-container .v-btn--brand {
+  background-color: #ff0c53;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff0c53), to(#e51422));
+  background-image: linear-gradient(270deg, #ff0c53, #e51422);
+}
+#content .wrapper .no-result .no-result-btn-container .v-btn--brand:hover {
+  background-color: #e51422 !important;
+  background-image: red !important;
+}
 #content .wrapper .cart-title {
   position: relative;
   height: 66px;

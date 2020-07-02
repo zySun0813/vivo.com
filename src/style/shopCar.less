@@ -8,6 +8,59 @@ body{
         position: relative;
         width: 1200px;
         margin: 0 auto;
+
+        //空购物车的样式
+        .no-result {
+            height: 452px;
+            background-color: #fff;
+            text-align: center;
+            img {
+                width: 189px;
+                height: 144px;
+                margin-top: 76px;
+            }
+            .no-result-des {
+                margin-top: 20px;
+                font-size: 15px;
+                color: #666;
+                text-align: center;
+                line-height: 22.5px;
+            }
+            .no-result-btn-container {
+                margin-top: 40px;
+                .v-btn:first-child {
+                    margin-right: 60px;
+                }
+                .v-btn {
+                    display: inline-block;
+                    // width: 170px;
+                    height: 46px;
+                    line-height: 46px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 18px;
+                    border-radius: 20px;
+                    margin-right: 27px;
+                    user-select: none;
+                    outline: none;
+                    border: none;
+                    width: 190px;
+                    margin-right: 0;
+                    cursor: pointer;
+                }
+                
+                .v-btn--brand {
+                    background-color: #ff0c53;
+                    background-image: -webkit-gradient(linear,right top,left top,from(#ff0c53),to(#e51422));
+                    background-image: linear-gradient(270deg,#ff0c53,#e51422);
+                    &:hover{
+                        background-color: #e51422 !important;
+                        background-image:red !important;
+                    }
+                }
+            }
+        }
+
         //购物车标题
         .cart-title{
             position: relative;
@@ -120,6 +173,7 @@ body{
                     text-align: center;
                     vertical-align: middle;
                     word-wrap: break-word;
+
                     td{
                         vertical-align: middle;
                         a{

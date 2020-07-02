@@ -131,6 +131,10 @@ body{
                             width: 100px;
                             height: 32px;
                             vertical-align: top;
+                            .disabled {
+                                cursor: not-allowed;
+                                color: #ddd !important;
+                            }
                             .reduce-num ,.add-num{
                                 border-radius: 2px 0 0 2px;
                                 display: inline-block;
@@ -145,11 +149,11 @@ body{
                                 border: 1px solid #bbb;
                             }
                             .prod-num{
-                                width: 32px;
+                                width: 35px;
                                 height: 32px;
                                 line-height: 18px;
                                 padding: 6px 2px;
-                                padding-left: 10px;
+                                // padding-left: 11px;
                                 font-size: 12px;
                                 text-align: center;
                                 border: 0;

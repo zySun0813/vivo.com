@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style/details.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1912005_719qjsk29vj.css">
     <link rel="stylesheet" href="../style/iconfont.css">
+    <script src="../js/require.js" data-main="../js/main.details"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
                     </li>
                 </ul>
                 <div class="vp-head-top-user">
-                    <a class="vp-user-shopcart" href="#">购物车</a>
+                    <a class="vp-user-shopcart" href="./shopCar.html">购物车</a>
                     <div class="vp-user-login-box" style="opacity: 1;">
                         <a class="vp-user-login" href="./login.html">登录</a><span>|</span>
                         <a class="vp-user-register" href="./register.html">注册</a>
@@ -230,6 +231,9 @@
                             <img src="../img/1808245379698434_250x250.png" class="corner">
                             <div class="bigPic">
                                 <img src="../img/10002225_1587193547603_750x750.png.webp" alt="">
+                                <img src="../img/10002225_1587348082279_750x750.png.webp" alt="" style="display: none;">
+                                <img src="../img/10002225_1587193547251_750x750.png.webp" alt="" style="display: none;">
+                                <img src="../img/10002225_1590684319918_750x750.png.webp" alt="" style="display: none;">
                             </div>
                             <ul class="imgLists">
                                 <li><img src="../img/10002225_1587193547603_250x250.png.webp" alt=""></li>
@@ -263,7 +267,7 @@
                             <div class="summary">
                                 <div class="summary_price">
                                     <p class="sale-price">
-                                        <dfn>￥</dfn>2998.00
+                                        <dfn>￥</dfn>
                                     </p>
                                 </div>
                                 <div class="summary_activity">
@@ -352,18 +356,18 @@
                             <dt class="sku-module_title">数量</dt>
                             <dd class="sku-module_content">
                                 <div class="sku-module_item number_item">
-                                    <label for="" class="disabled">-</label>
-                                    <input type="number" readonly="readonly" value="1"><label for="" class="">+</label>
+                                    <label for="" class="disabled num_reduce">-</label>
+                                    <input class="num" type="number" readonly="readonly" value="1"><label for="" class="num_add">+</label>
                                 </div>
                                 <span class="number_tips"> (仅限购5件)</span>
                             </dd>
                         </dl>
                         <div class="settle">
                             <div class="settle_total">
-                                <p class="price"><dfn>￥</dfn>2998
+                                <p class="price"><dfn>￥</dfn><i class="sum-price">2998</i>
                                 </p>
                                 <p class="info">
-                                    已选： 5G全网通版 8GB+128GB 青空蓝 官方标配 1件
+                                    已选：5G全网通版 8GB+128GB 青空蓝 官方标配 <i class="select_num">1</i> 件
                                 </p>
                             </div>
                             <div class="settle_operation">
@@ -406,8 +410,8 @@
                 </div>
                 <div class="detail_content">
                     <div class="info_content">
-                        <p><img src="../img/20200629102002613563_original.jpg.webp" alt=""></p>
-                        <p><img src="../img/20200602142041698757_original.png.webp" alt=""></p>
+                        <img src="../img/20200629102002613563_original.jpg.webp" alt="">
+                        <img src="../img/20200602142041698757_original.png.webp" alt="">
                     </div>
                 </div>
             </section>

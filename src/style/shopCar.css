@@ -133,6 +133,10 @@ body {
   height: 32px;
   vertical-align: top;
 }
+#content .wrapper .shop-cart-wrap .prod-list-wrap .order-table td .number-box .disabled {
+  cursor: not-allowed;
+  color: #ddd !important;
+}
 #content .wrapper .shop-cart-wrap .prod-list-wrap .order-table td .number-box .reduce-num,
 #content .wrapper .shop-cart-wrap .prod-list-wrap .order-table td .number-box .add-num {
   border-radius: 2px 0 0 2px;
@@ -148,11 +152,10 @@ body {
   border: 1px solid #bbb;
 }
 #content .wrapper .shop-cart-wrap .prod-list-wrap .order-table td .number-box .prod-num {
-  width: 32px;
+  width: 35px;
   height: 32px;
   line-height: 18px;
   padding: 6px 2px;
-  padding-left: 10px;
   font-size: 12px;
   text-align: center;
   border: 0;

@@ -479,6 +479,12 @@ body {
   vertical-align: top;
   width: 100%;
 }
+#content .wrapper .floor-list .c_3 .box {
+  margin-right: 9px !important;
+}
+#content .wrapper .floor-list .c_3 .box:last-of-type {
+  margin-right: 0px !important;
+}
 #content .wrapper .floor-list .pc_6 .box,
 #content .wrapper .floor-list .c_8 .box {
   width: 293px !important;

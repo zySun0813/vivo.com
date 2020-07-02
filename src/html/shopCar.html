@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1912005_xwlt49c6n7e.css">
     <link rel="stylesheet" href="../style/iconfont.css">
 
+
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                     </li>
                 </ul>
                 <div class="vp-head-top-user">
-                    <a class="vp-user-shopcart" href="#">购物车</a>
+                    <a class="vp-user-shopcart" href="./shopCar.html">购物车</a>
                     <div class="vp-user-login-box" style="opacity: 1;">
                         <a class="vp-user-login" href="./login.html">登录</a><span>|</span>
                         <a class="vp-user-register" href="./register.html">注册</a>
@@ -229,7 +230,7 @@
                     <tbody>
                         <tr>
                             <th class="check-col">
-                                <label><input type="checkbox" class="checkbox checked"><a href="javascript:void(0);">全选</a></label>
+                                <label><input type="checkbox" class="checkbox allSelect"><a href="javascript:void(0);">全选</a></label>
                             </th>
                             <th class="goods-col">商品名称</th>
                             <th class="price-col">价格（元）</th>
@@ -246,8 +247,8 @@
             <!-- 购物车 -->
             <div class="shop-cart-wrap">
                 <div class="prod-list-wrap">
-                    <table class="order-table">
-                        <tr class="prod-line tr-border-top">
+                    <table class="order-table shop-table">
+                        <!-- <tr class="prod-line tr-border-top">
                             <td class="check-col"><input type="checkbox" class="checkbox checked"></td>
                             <td class="prod-pic">
                                 <a href="#" target="_blank">
@@ -274,7 +275,7 @@
                             <td>3498</td>
                             <td class="total-price column">3498.00</td>
                             <td><a href="javascript:;" class="favorite">加入到收藏夹</a><br><a href="javascript:;">删除</a></td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>
@@ -285,8 +286,8 @@
                     <div class="cart-toolbar-inner">
                         <div class="option-operation">
                             <ul>
-                                <li><label><input type="checkbox" class="checkbox checked"><a href="javascript:void(0);">全选</a></label></li>
-                                <li><a href="javascript:void(0);">删除选中的商品</a></li>
+                                <li><label><input type="checkbox" class="checkbox allSelect"><a href="javascript:void(0);">全选</a></label></li>
+                                <li><a href="javascript:void(0);" class="allDelete">删除选中的商品</a></li>
                                 <li><a href="javascript:void(0);">移入收藏夹</a></li>
                             </ul>
                         </div>
@@ -296,11 +297,11 @@
                                     <td class="sum-area">
                                         <p class="sum-area-infoI">
                                             已选商品
-                                            <em><b class="red">1</b></em>件，合计（不含运费）：
-                                            <b class="price large"><dfn>¥</dfn><span>3498.00</span></b></p>
+                                            <em><b class="red">0</b></em> 件，合计（不含运费）：
+                                            <b class="price large"><dfn>¥</dfn><span class="zongji">0.00</span></b></p>
                                         <p class="sum-area-price">
                                             ( 商品总价：
-                                            <span class="price"><dfn>¥ </dfn><span>3498.00</span></span>
+                                            <span class="price"><dfn>¥ </dfn><span class="zongji">0.00</span></span>
                                             优惠：
                                             <span class="price"><dfn>¥ </dfn><span>0.00</span></span> )
                                         </p>
@@ -544,5 +545,6 @@
         </li>
     </ul>
 </body>
+<script src="../js/require.js" data-main="../js/main.shopcar"></script>
 
 </html>

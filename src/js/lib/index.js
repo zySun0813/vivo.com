@@ -53,13 +53,13 @@ define(['jquery'], function($) {
         },
 
         //轮播图效果
-        bannerShow: function banner() {
+        bannerShow: function() {
             //鼠标点击小按钮进行切图
             $('.thumb-list>li').click(function() {
                 $('.thumb-list>li').removeClass('active');
                 $(this).addClass('active');
                 // console.log($(this).index());
-                $('.img-list').css('left', -1600 * $(this).index());
+                $('.img-list').css('left', -2134 * $(this).index());
             });
             var bannerIndex = 0;
             //自动轮播
@@ -70,7 +70,7 @@ define(['jquery'], function($) {
                 }
                 $('.thumb-list>li').removeClass('active');
                 $('.thumb-list>li').eq(bannerIndex).addClass('active');
-                $('.img-list').css('left', -1600 * bannerIndex);
+                $('.img-list').css('left', -2134 * bannerIndex);
 
             }, 1000);
 
@@ -87,10 +87,72 @@ define(['jquery'], function($) {
                     }
                     $('.thumb-list>li').removeClass('active');
                     $('.thumb-list>li').eq(bannerIndex).addClass('active');
-                    $('.img-list').css('left', -1600 * bannerIndex);
+                    $('.img-list').css('left', -2134 * bannerIndex);
 
                 }, 3000);
             });
+        },
+
+        //返回顶部效果
+        cancelTop: function() {
+            $(window).on('scroll', function() {
+                let top = $(this).scrollTop();
+                if (top >= 700) {
+                    $('.icon-fanhuidingbu').css('display', 'block');
+                } else {
+                    $('.icon-fanhuidingbu').css('display', 'none');
+                }
+            })
+            $('.icon-fanhuidingbu').on('click', function() {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 600);
+            })
+        },
+
+        //抢购模块
+        timeDown: function() {
+            //抢购倒计时
+            setInterval(function() {
+                var d = new Date();
+                var d2 = new Date(2020, 7, 16, 18, 0, 0);
+                var num = d2 - d; //这是两个天数之间的毫秒差
+                var secondNum = num / 1000; //将毫秒转化成秒
+                var day = parseInt(secondNum / 86400); //剩余天数
+                var hour = parseInt(secondNum % 86400 / 3600); //再将剩余的秒转换成小时
+                var minute = parseInt(secondNum % 86400 % 3600 / 60); //再将剩余的秒转换成分钟
+                var second = parseInt(secondNum % 86400 % 3600 % 60); //最后拿到剩余的秒
+
+                $('.hour').html(hour);
+                $('.min').html(minute);
+                $('.sec').html(second);
+            }, 1000);
+
+            //前进、后退按钮功能
+            //前进按钮
+            $('.J_swiper-prev').on('click', function() {
+                let left = $('.swiper-wrapper').css('left').slice(0, -2);
+                if (left == 0) {
+                    $('.swiper-wrapper').css('left', 0);
+                } else {
+                    left = +left + 302.5;
+                    console.log(left);
+                    $('.swiper-wrapper').css('left', left);
+                }
+            })
+
+            //后退按钮
+            $('.J_swiper-next').on('click', function() {
+                let left = $('.swiper-wrapper').css('left').slice(0, -2);
+                if (left == -605) {
+                    $('.swiper-wrapper').css('left', -605);
+                } else {
+                    left = +left - 302.5;
+                    console.log(left);
+                    $('.swiper-wrapper').css('left', left);
+                }
+
+            })
         }
     }
 });

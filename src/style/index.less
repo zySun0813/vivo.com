@@ -1,5 +1,6 @@
 body {
     min-width: 1200px;
+    width: 100%;
     background-color: #f7f7f5;
     font: 14px/1.5 "Microsoft Yahei",Arial;
     
@@ -9,91 +10,66 @@ body {
 //主要内容
 #content{
     min-width: 1200px;    
+    width: 100%;
     //轮播图
     .banner {      
+        position: relative;
+        // top: 20px;
         width: 100%;
-        margin: 0 auto;      
-        margin-bottom: 10px;
-        font-size: 0;
+        height: 523px;
+        margin-bottom: 20px;
+        overflow: hidden;
         .active{
-            height: 10px !important;
+            height: 8px !important;
         }
         .img-list {
-            width: 100%;
-            // left: -4800px;
-            position: relative;
-            overflow: hidden;
-            >li:first-child {
-                margin-left: 0;
-            }
-            >li {
+            position: absolute;
+            left: -6400px;
+            display: flex;
+            width: 12800px;
+            // overflow: hidden;
+            >li{
+                width: 2560px;
+                height: 600px;
                 position: relative;
-                left: -520px;
-                float: left;
-                margin-left: -100%;
-                width: 100%;
-                height: 523px;
-                background: #fff center center no-repeat;
-                opacity: 0;
-                li>.box {
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    width: 100%;
-                    // width: 2560px;
+                a{
+                    width: 2560px;
                     height: 523px;
-                    // margin-left: -1280px;
-                    .structure-module {
-                        position: relative;
-                        width: 100%;
-                        overflow: hidden;
-                        .sm-wrapper {
-                            width: 100%;
-                            display: block;
-                            margin: 0 auto;
-                            img {
-                                // margin-left: -300px;
-                                position: absolute;
-                                left: -300px;
-                                display: block;
-                                margin:0 auto;
-                                min-height: 200px;
-                            }
-                        }
-                    }
                 }
-            }
-            img {
-                vertical-align: top;
-                // min-width: 2560px;
-                height: 523px;
-            }
-            .current {
-                position: relative;
-                z-index: 1;
-                background-color: rgba(221,221,221,.7);
-                opacity: 1;
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 523px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    left: -260px;
+                }
             }
         }
 
         //轮播图下方的进度条
         .thumb-list {
-            margin-top: -25px;
+            // margin-top: -25px;
             height: 25px;
             line-height: 5px;
             text-align: center;
+            margin-top: 500px;
             li {
                 background-color: rgba(255,255,255,.7);
                 position: relative;
                 z-index: 3;
                 height: 3px;
+                transition: 2s;
                 cursor: pointer;
                 display: inline-block;
                 vertical-align: bottom;
                 margin: 0 5px;
                 width: 42px;
                 // background-color: #ebebeb;
+               
             }
+            
         }
 
     }
@@ -101,101 +77,157 @@ body {
         width: 940px;
 		position: absolute;
 		top: 125px;
-		left: 150px;
+		left: 160px;
 		z-index: 10;
 		nav{
-			padding:35px 0px;
+			padding:30px 0px;
 			width: 200px;
-			background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255,255,255,0.7);
+            // position: relative;
 			// position: absolute;
 			li{
 				// width: 200px;
-				a{
+				>a{
 					display: flex;
 					justify-content: space-between;
-                    padding: 20px 30px 18px 33px;
-                    color: #000;
+                    padding: 20px 33px 18px 33px;
+                    color: #333;
 				}
 				:hover{
 					background-color: white;
-				}
-			}
-		}
-		aside{
-			position: absolute;
-			top: 0px;
-			left: 210px;
-			background-color: white;
-			width: 750px;
-			height: 420px;
-			display: none;
-			z-index: 11;
-			box-sizing: content-box;
-			padding: 17px 50px 47px 17px;
-			header{
-				display: flex;
-				justify-content: space-between;
-				line-height: 38px;
-				span:last-child{
-					font-size: 12px;
-					color: #999999;
-				}
-				}
-				.classList1{
-					display: flex;
-					flex-wrap: wrap;
-					border-bottom: 1px solid #ccc;
-					padding-bottom: 18px;
-					li{
-						margin-right: 35px;
-						width: 100px;
-						border-radius: 10px;
-						margin-top: 11px;
-						background: url(../images/back1.jpg) no-repeat;
-						background-size:160px 50px;
-						text-align: right;
-						line-height: 50px;
-						box-sizing: content-box;
-						padding-right: 60px;
-						position: relative;
-						span{
-							display: none;
-							width: 160px;
-							height: 50px;
-							background-color: rgba(0,0,0,0.1);
-							position: absolute;
-							left: 0;
-							top: 0;
-							border-radius: 10px;
-						}
-					}
-					:nth-child(4n){
-						margin-right: 0px;
-					}
-			}
-			.classList2{
-				display: flex;
-				flex-wrap: wrap;
-				
-				padding-top: 26px;
-				li{
-					width: 230px;
-					margin-right: 30px;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					margin-bottom: 20px;
-					height: 45px;
-					img{
-						height: 45px;
-						margin-right: 10px;
-					}
-				}
-				:nth-child(3n){
-					margin-right: 0px;
-				}
-			}
-		}
+                }
+                &:hover .listRight{
+                    transition: 2s;
+                    display: block;
+                }
+                // position: relative;
+            }
+            .listRight{
+                
+                display: none;
+                width: 740px;
+                height: 472px;
+                background-color: #fff;
+                position: absolute;
+                left: 200px;
+                top: 0px;
+                margin-left: 10px;
+                .category-detail {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 8px 50px 0 44px;
+                    width: 740px;
+                    white-space: normal;
+                    .category-all {
+                        float: right;
+                        color: #999;
+                        font-size: 12px;
+                        line-height: 60px;
+                        .arrow {
+                            display: inline-block;
+                            position: relative;
+                            width: 6px;
+                            height: 10px;
+                        }
+                    }
+                    >p {
+                        color: #252525;
+                        font-size: 16px;
+                        line-height: 58px;
+                    }
+                    .has-border {
+                        border-color: #e5e5e5;
+                    }
+                    .category-sub {
+                        margin-bottom: 9px;
+                        padding-bottom: 6px;
+                        font-size: 1px;
+                        text-align: justify;
+                        border-bottom: 1px solid transparent;
+                        >li {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-bottom: 12px;
+                            width: 156px;
+                            // float: left;
+                            a {
+                                position: relative;
+                                z-index: 0;
+                                display: block;
+                                padding: 0 8px !important;
+                                color: #555;
+                                font-size: 14px;
+                                line-height: 50px;
+                                text-align: center;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                border-radius: 6px;
+                                background: center;
+                                background-size: cover;
+                                overflow: hidden;
+                                display: block;
+                                background:#ccc;
+                            }
+                        }
+                    }
+                    .category-product {
+                        margin-bottom: -40px;
+                        padding-top: 39px;
+                        width: 690px;
+                        font-size: 1px;
+                        text-align: justify;
+                        li {
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-bottom: 20px;
+                            width: 222px;
+                            font-size: 0;
+                            .icon-tag {
+                                position: absolute;
+                                margin: -17px 0 0 36px;
+                                width: 26px;
+                                height: 26px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                >img {
+                                    vertical-align: middle;
+                                    width: 26px;
+                                    height: 26px;
+                                }
+                            }
+                            a{
+                                padding: 0px 80px 0px 0px;
+                            }
+                            .hot {
+                                background: #FC4F66 center/18px no-repeat url(https://shopstatic.vivo.com.cn/vivoshop/web/dist/img/home/hot_c29ecc5.png);
+                            }
+                            .recomm {
+                                background: #FC854F center/18px no-repeat url(https://shopstatic.vivo.com.cn/vivoshop/web/dist/img/home/recommend_e6d56bf.png);
+                            }
+                            img {
+                                vertical-align: middle;
+                                width: 46px;
+                                height: 46px;
+                            }
+                            span {
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-left: 8px;
+                                max-width: 168px;
+                                color: #252525;
+                                font-size: 14px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+		
     }
 
     .wrapper {
@@ -295,6 +327,8 @@ body {
             }
             .next {
                 left: 1220px !important;
+                position: absolute;
+                z-index: 9;
                 // right: -50px;
             }
             .swiper-container {
@@ -384,6 +418,35 @@ body {
                                     color: #aaa;
                                     font-size: 14px;
                                 }
+                            }
+                        }
+                        .detail {                           
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 292.5px;
+                            height: 100%;
+                            .title {
+                                font-size: 18px;
+                                line-height: 37px;
+                            }
+                            .time {
+                                font-size: 30px;
+                                line-height: 59px;
+                            }
+                            .btn {
+                                margin-top: 38px;
+                                width: 144px;
+                                height: 48px;
+                                line-height: 48px;
+                                text-align: center;
+                                border-radius: 100px;
+                                background-color: #F81200;
+                                color: #fff;
+                                font-size: 19px;
+                                display: inline-block;
+                                margin-left: 15px;
                             }
                         }
                     }

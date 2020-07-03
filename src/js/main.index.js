@@ -9,4 +9,6 @@ require(['index'], function(index) {
     index.render();
     index.headMove();
     index.bannerShow();
+    index.cancelTop();
+    index.timeDown();
 });

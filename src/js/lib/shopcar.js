@@ -1,6 +1,6 @@
 // let baseUrl = "http://localhost/h5-203/vivo.com";
 
-define(['jquery', 'cookie', 'details'], function($, cookie, details) {
+define(['jquery', 'cookie', 'details', 'index'], function($, cookie, details, index) {
     return {
         //渲染购物车
         render: function() {
@@ -115,7 +115,7 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                     sumPrice = +sumPrice + +price;
                     sumNum = +sumNum + 1;
                     $('.red').html(sumNum);
-                    $('.zongji').html(sumPrice);
+                    $('.zongji').html(sumPrice.toFixed(2));
                 }
             })
         },
@@ -142,7 +142,7 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                     sumPrice = +sumPrice - +price;
                     sumNum = +sumNum - 1;
                     $('.red').html(sumNum);
-                    $('.zongji').html(sumPrice);
+                    $('.zongji').html(sumPrice.toFixed(2));
                 }
 
             })
@@ -151,10 +151,13 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
         delPro: function() {
             //删除单件产品
             $('.shop-table').on('click', '.del-pro', function() {
+                let proNum = $(this).parents('.shop-table').find('tr').length;
                 let price = $(this).parents('tr').find('.price-col').html();
                 let id = $(this).parents('tr').find('.prod-id').html();
                 $(this).parents('tr').remove();
                 details.addItem(id, price, 0);
+
+
 
                 //删除该商品的时候，如果该商品处于选中状态，应该减去该商品的小计，重新计算该购物车的总价
                 if ($(this).parents('tr').find('.checkbox').prop('checked')) {
@@ -163,9 +166,14 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                     let sumPrice = $('.zongji').html();
                     let sumNum = $('.red').html();
                     $('.red').html(sumNum - num);
-                    $('.zongji').html(sumPrice - xiaoji);
+                    $('.zongji').html((sumPrice - xiaoji).toFixed(2));
                 }
-                location.reload();
+
+                //删除到最后一件商品的时候，刷新当前页面
+                if (proNum == 1) {
+                    location.reload();
+                }
+
             })
 
             //删除所有选中的产品
@@ -186,8 +194,9 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                 // let sumNumD = $('.red').html();
 
                 //数量和总计自动为0，因为此时已经没有选择的商品了
+                let flagNum = 0;
                 $('.red').html(0);
-                $('.zongji').html(0);
+                $('.zongji').html(flagNum.toFixed(2));
 
                 //实现DOM界面的删除
                 let pro = Array.from($('.shop-table tr').find('.checkbox'));
@@ -217,12 +226,12 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                     count = +count + +num;
                     sum = +sum + +price;
                     $('.red').html(count);
-                    $('.zongji').html(sum);
+                    $('.zongji').html(sum.toFixed(2));
                 } else {
                     count = +count - +num;
                     sum = +sum - +price;
                     $('.red').html(count);
-                    $('.zongji').html(sum);
+                    $('.zongji').html(sum.toFixed(2));
                 }
 
 
@@ -251,8 +260,9 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
 
                 //全选时候的价格计算
                 if (!$(this).prop('checked')) {
+                    let flagNum = 0;
                     $('.red').html(0);
-                    $('.zongji').html(0);
+                    $('.zongji').html(flagNum.toFixed(2));
                 } else {
                     var sum = Array.from($('.shop-table .total-price'));
                     var num = Array.from($('.shop-table .prod-num'));
@@ -265,7 +275,7 @@ define(['jquery', 'cookie', 'details'], function($, cookie, details) {
                     num.forEach(elm => {
                         zCount = zCount + +$(elm).val();
                     })
-                    $('.zongji').html(zongji);
+                    $('.zongji').html(zongji.toFixed(2));
                     $('.red').html(zCount);
                 }
             })

@@ -567,6 +567,10 @@ dfn {
   bottom: 50px;
   margin-bottom: 0px;
 }
+#side-bar .icon-fanhuidingbu {
+  display: none;
+  transition: 3s;
+}
 #side-bar > li {
   position: relative;
   width: 50px;

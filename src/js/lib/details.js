@@ -1,8 +1,9 @@
-let baseUrl = "http://localhost/h5-203/vivo.com";
+// let baseUrl = "http://localhost/h5-203/vivo.com";
 let price = 0;
 
 define(['jquery', 'cookie'], function($, cookie) {
     return {
+        //页面渲染
         render: function(callback) {
             let id = location.search.split("=")[1];
 
@@ -38,11 +39,14 @@ define(['jquery', 'cookie'], function($, cookie) {
                     $('.name').html(title);
                     $('.info_content').html(detailsInfo);
                     $('.sale-price').append(salePrice);
+                    $('.send').html(salePrice);
 
                     callback && callback(res.id, res.price);
                 }
             });
         },
+
+        //向cookie中存取数据
         addItem: function(id, price, num) {
             // shop
             let shop = cookie.get('shop'); // 获取cookie中的购物车 
@@ -88,6 +92,8 @@ define(['jquery', 'cookie'], function($, cookie) {
             })
             cookie.set('shop', JSON.stringify(shop), 1);
         },
+
+        //移动小图，切换对应的大图效果
         listMove: function() {
             $('.imgLists').on('mouseenter', 'li', function() {
                 let index = $(this).index();
@@ -95,6 +101,8 @@ define(['jquery', 'cookie'], function($, cookie) {
                 $('.bigPic img').attr('src', smallStr + '750x750.png.webp');
             })
         },
+
+        //增加按钮
         addNum: function() {
             $('.num_add').on('click', function() {
                 //一旦能加了，减号立即就可以使用了
@@ -116,6 +124,8 @@ define(['jquery', 'cookie'], function($, cookie) {
                 }
             })
         },
+
+        //减少按钮
         redNum: function() {
             $('.num_reduce').on('click', function() {
                 //一旦能减了，加号就立即可以使用了
@@ -140,6 +150,26 @@ define(['jquery', 'cookie'], function($, cookie) {
             })
 
 
+        },
+
+        //滚动滚轴，左侧信息的固定
+        leftInfoScroll: function() {
+            $(window).on('scroll', function() {
+                let top = $(this).scrollTop();
+                if (top <= 172) {
+                    $('.left-info').css('position', 'absolute');
+                    $('.left-info').css('left', '0');
+                    $('.left-info').css('top', '0');
+                } else if (top <= 1100) {
+                    $('.left-info').css('position', 'fixed');
+                    $('.left-info').css('left', '160px');
+                    $('.left-info').css('top', '30px');
+                } else {
+                    $('.left-info').css('position', 'absolute');
+                    $('.left-info').css('left', '0');
+                    $('.left-info').css('top', '909px');
+                }
+            })
         }
     }
 });

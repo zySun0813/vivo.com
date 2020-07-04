@@ -57,8 +57,8 @@ define(['jquery'], function($) {
             })
         },
 
-        //登录按钮相关功能
-        login: function() {
+        //下一步按钮相关功能
+        next: function() {
             $('.input').focus(function() {
                 $('.errTip-Box').css('display', 'none');
             });

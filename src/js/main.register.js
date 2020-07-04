@@ -9,5 +9,5 @@ require(['register'], function(register) {
     register.countryList();
     register.phoneList();
     register.readAgreement();
-    register.login();
+    register.next();
 });

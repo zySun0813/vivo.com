@@ -9,4 +9,5 @@ require(['registerSetPwd'], function(registerSetPwd) {
     registerSetPwd.getPhoneNum();
     registerSetPwd.getCode();
     registerSetPwd.eyeShow();
+    registerSetPwd.registerBtn();
 });

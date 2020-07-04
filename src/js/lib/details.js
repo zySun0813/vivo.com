@@ -99,6 +99,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                 let index = $(this).index();
                 let smallStr = $(this).find('img').attr('src').slice(0, -16);
                 $('.bigPic img').attr('src', smallStr + '750x750.png.webp');
+                $('.largerPic').attr('src', smallStr + '750x750.png.webp');
             })
         },
 
@@ -170,6 +171,75 @@ define(['jquery', 'cookie'], function($, cookie) {
                     $('.left-info').css('top', '909px');
                 }
             })
+        },
+
+        // 放大镜效果
+        fangdj: function() {
+            var movebox = $('.movebox'),
+                largerPic = $('.largerPic'),
+                larger = $('.larger'),
+                bigPic = $('.bigPic'),
+                imgLi = $('.imgLists>li'),
+                mainPic = $('.bigPic>img'),
+                largerPic = $('.larger>img');
+
+
+            // 1. 绑定事件
+            bigPic.on('mouseover', function() {
+                $('.largerPic').attr('src', $('.bigPic>img').attr('src'));
+
+                // 让元素显示
+                movebox.addClass('show');
+                larger.addClass('show');
+
+                // movebox的大小计算
+                movebox.css({
+                    width: (bigPic.width() * larger.width()) / largerPic.width() + 'px',
+                    height: (bigPic.height() * larger.height()) / largerPic.height() + 'px',
+                    // width: '100px',
+                    // height: '100px'
+                })
+                console.log(bigPic.width());
+
+                // 2.让movebox跟随鼠标移动
+                bigPic.on('mousemove', function(ev) {
+                    let top = ev.pageY - bigPic.offset().top - movebox.height() / 2;
+                    let left = ev.pageX - bigPic.offset().left - movebox.width() / 2;
+
+                    // 3.比例计算
+
+                    let ratio = largerPic.width() / bigPic.width(); // 小数 大于1的数
+
+                    // 边界管理
+                    if (top <= 0) {
+                        top = 0;
+                    } else if (top >= bigPic.height() - movebox.height()) {
+                        top = bigPic.height() - movebox.height() - 2;
+                    }
+
+                    if (left <= 0) {
+                        left = 0;
+                    } else if (left >= bigPic.width() - movebox.width()) {
+                        left = bigPic.width() - movebox.width() - 2;
+                    }
+
+                    movebox.css({
+                        top: top + 'px',
+                        left: left + 'px'
+                    });
+
+                    largerPic.css({
+                        top: -top * ratio + 'px',
+                        left: -left * ratio + 'px'
+                    });
+                });
+            });
+
+            bigPic.on('mouseout', function() {
+                movebox.removeClass('show');
+                larger.removeClass('show');
+            });
+
         }
     }
 });

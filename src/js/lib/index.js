@@ -1,6 +1,6 @@
 let baseUrl = "http://localhost/h5-203/vivo.com"; // 基础路径 必须是绝对路径
 
-define(['jquery'], function($) {
+define(['jquery', 'cookie'], function($, cookie) {
     return {
         //渲染首页
         render: function() {
@@ -153,6 +153,17 @@ define(['jquery'], function($) {
                 }
 
             })
+        },
+
+        //隐藏登录注册，显示个人中心
+        personCenter: function() {
+            let phone = cookie.get('phone');
+            if (phone) {
+                $('.vp-user-login-box').css('display', 'none');
+                $('.vp-head-top-user').append('<a>个人中心</a>');
+            } else {
+                $('.vp-user-login-box').css('display', 'block');
+            }
         }
     }
 });

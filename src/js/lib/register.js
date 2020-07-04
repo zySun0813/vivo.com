@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost/h5-203/vivo.com"; // 基础路径 必须是绝对路径
+// let baseUrl = "http://localhost/h5-203/vivo.com"; // 基础路径 必须是绝对路径
 
 define(['jquery'], function($) {
     return {
@@ -38,7 +38,7 @@ define(['jquery'], function($) {
                     $('.code-list-box').css('display', 'none');
                 }
             });
-            //选择国家
+            //选择区号
             $('.code-list').on('click', '.code-item', function() {
                 $('.show-code').html($(this).find('div').eq(1).html());
             })

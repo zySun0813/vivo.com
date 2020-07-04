@@ -1,7 +1,7 @@
 let baseUrl = "http://localhost/h5-203/vivo.com"; // 基础路径 必须是绝对路径
 let randCode;
 
-define(['jquery'], function($) {
+define(['jquery', 'md5'], function($, md5) {
     return {
         //页面获取电话号码
         getPhoneNum: function() {
@@ -74,7 +74,7 @@ define(['jquery'], function($) {
                                         type: "get",
                                         url: `${baseUrl}/interface/register.php`,
                                         data: {
-                                            'password': $('.pwdInput').val(),
+                                            'password': $.md5($('.pwdInput').val()),
                                             'phone': phone
                                         },
                                         dataType: "json",

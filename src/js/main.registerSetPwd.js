@@ -1,7 +1,11 @@
 require.config({
     paths: {
         jquery: './jquery.min',
-        registerSetPwd: './lib/registerSetPwd'
+        registerSetPwd: './lib/registerSetPwd',
+        md5: './md5'
+    },
+    shim: {
+        md5: ['jquery']
     }
 });
 

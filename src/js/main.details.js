@@ -19,12 +19,17 @@ require(['jquery', 'details', 'index'], function($, details, index) {
             }
         })
 
+
     });
     details.listMove();
     details.addNum();
     details.redNum();
     details.leftInfoScroll();
+    details.fangdj();
+
+
     index.cancelTop();
     index.headMove();
+    index.personCenter();
 
 });

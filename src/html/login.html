@@ -7,6 +7,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="../style/public.css">
     <link rel="stylesheet" href="../style/login.css">
+    <script src="../js/require.js" data-main="../js/main.login"></script>
 
 </head>
 
@@ -38,10 +39,34 @@
                                         <span class="code-item">+86</span>
                                         <i class="icon-arrow-down"></i>
                                     </div>
-                                    <input type="text" placeholder="请输入手机号" class="input">
+                                    <input type="text" placeholder="请输入手机号" class="input phoneInput">
                                     <!-- 区号列表 -->
                                     <div class="country-list-box" style="display: none;">
                                         <ul class="country-list">
+                                            <li index="0" class="country-item">
+                                                <span>中国</span>
+                                                <span>+86</span>
+                                            </li>
+                                            <li index="1" class="country-item">
+                                                <span>India</span>
+                                                <span>+91</span>
+                                            </li>
+                                            <li index="1" class="country-item">
+                                                <span>Indonesia</span>
+                                                <span>+62</span>
+                                            </li>
+                                            <li index="0" class="country-item">
+                                                <span>中国</span>
+                                                <span>+86</span>
+                                            </li>
+                                            <li index="1" class="country-item">
+                                                <span>India</span>
+                                                <span>+91</span>
+                                            </li>
+                                            <li index="1" class="country-item">
+                                                <span>Indonesia</span>
+                                                <span>+62</span>
+                                            </li>
                                             <li index="0" class="country-item">
                                                 <span>中国</span>
                                                 <span>+86</span>
@@ -63,9 +88,10 @@
                                 </div>
                                 <!-- 密码框 -->
                                 <div class="pwd-box" style="display: none;">
-                                    <input type="password" placeholder="请输入密码" autocomplete="off" class="input">
+                                    <input type="password" placeholder="请输入密码" autocomplete="off" class="input pwdInput">
                                     <div class="eye-box">
                                         <img src="../img/eyes-off.png" alt="">
+                                        <img src="../img/eyes-on.png" alt="" style="display: none;">
                                     </div>
                                 </div>
                                 <!-- 输入验证码 -->
@@ -91,7 +117,7 @@
                             <!--自动登录-->
                             <div class="auto-login">
                                 <div class="check">
-                                    <img src="./登录_files/selected-icon.png" style="display: none;">
+                                    <img src="../img/selected-icon.png" style="display: none;">
                                 </div>
                                 <span>两周内自动登录</span>
                             </div>

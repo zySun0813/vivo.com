@@ -35,7 +35,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                     });
 
                     $('.c_3>.box-list').html(temp);
-
                 }
             });
         },
@@ -70,9 +69,10 @@ define(['jquery', 'cookie'], function($, cookie) {
                 }
                 $('.thumb-list>li').removeClass('active');
                 $('.thumb-list>li').eq(bannerIndex).addClass('active');
+                $('.thumb-list>li>i').eq(bannerIndex).addClass('active2');
                 $('.img-list').css('left', -2134 * bannerIndex);
 
-            }, 1000);
+            }, 3000);
 
             //鼠标移入停止轮播
             $('.banner').mouseenter(function() {
@@ -160,9 +160,33 @@ define(['jquery', 'cookie'], function($, cookie) {
             let phone = cookie.get('phone');
             if (phone) {
                 $('.vp-user-login-box').css('display', 'none');
-                $('.vp-head-top-user').append('<a>个人中心</a>');
+                $('.vp-head-top-user').append('<a class="personCenter">个人中心</a>');
+
+                $('.vp-head-top-user').on('mouseenter', '.personCenter', function() {
+                    $('.alreadyLogin').css('display', 'block');
+                    $('.alreadyLogin').css('height', '150px');
+                });
+                $('.alreadyLogin').on('mouseleave', function() {
+                    $(this).css('display', 'none');
+                    $('.alreadyLogin').css('height', '0px');
+                });
+
             } else {
                 $('.vp-user-login-box').css('display', 'block');
+            }
+        },
+
+        //购物车数量
+        shopNums: function() {
+            let count = 0;
+            let shop = cookie.get('shop'); //   获取cookie数据
+            shop = JSON.parse(shop);
+            shop.forEach(function(elm) {
+                count += +elm.num;
+            });
+            if (count != 0) {
+                $('.prodnum').html(count);
+                $('.shopNums').html(`(${count})`);
             }
         }
     }

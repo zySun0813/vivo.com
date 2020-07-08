@@ -16,4 +16,5 @@ require(['index'], function(index) {
     index.cancelTop();
     index.timeDown();
     index.personCenter();
+    index.shopNums();
 });

@@ -31,5 +31,6 @@ require(['jquery', 'details', 'index'], function($, details, index) {
     index.cancelTop();
     index.headMove();
     index.personCenter();
+    index.shopNums();
 
 });

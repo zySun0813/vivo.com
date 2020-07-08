@@ -178,11 +178,7 @@ define(['jquery', 'cookie'], function($, cookie) {
             var movebox = $('.movebox'),
                 largerPic = $('.largerPic'),
                 larger = $('.larger'),
-                bigPic = $('.bigPic'),
-                imgLi = $('.imgLists>li'),
-                mainPic = $('.bigPic>img'),
-                largerPic = $('.larger>img');
-
+                bigPic = $('.bigPic');
 
             // 1. 绑定事件
             bigPic.on('mouseover', function() {
@@ -191,15 +187,6 @@ define(['jquery', 'cookie'], function($, cookie) {
                 // 让元素显示
                 movebox.addClass('show');
                 larger.addClass('show');
-
-                // movebox的大小计算
-                movebox.css({
-                    width: (bigPic.width() * larger.width()) / largerPic.width() + 'px',
-                    height: (bigPic.height() * larger.height()) / largerPic.height() + 'px',
-                    // width: '100px',
-                    // height: '100px'
-                })
-                console.log(bigPic.width());
 
                 // 2.让movebox跟随鼠标移动
                 bigPic.on('mousemove', function(ev) {

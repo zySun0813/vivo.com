@@ -18,4 +18,5 @@ require(['shopcar', 'index'], function(shopcar, index) {
     index.cancelTop();
     index.headMove();
     index.personCenter();
+    index.shopNums();
 })

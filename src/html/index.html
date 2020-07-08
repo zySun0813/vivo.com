@@ -7,7 +7,7 @@
     <title>vivo官方商城</title>
     <link rel="stylesheet" href="../style/public.css">
     <link rel="stylesheet" href="../style/index.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1912005_xwlt49c6n7e.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1912005_pszdgrrrzb8.css">
     <link rel="stylesheet" href="../style/iconfont.css">
     <script src="../js/require.js" data-main="../js/main.index"></script>
 </head>
@@ -36,12 +36,17 @@
                     </li>
                 </ul>
                 <div class="vp-head-top-user">
-                    <a class="vp-user-shopcart" href="./shopCar.html">购物车</a>
+                    <a class="vp-user-shopcart" href="./shopCar.html">购物车<i class="shopNums"></i></a>
                     <div class="vp-user-login-box" style="opacity: 1;">
                         <a class="vp-user-login" href="./login.html">登录</a><span>|</span>
                         <a class="vp-user-register" href="./register.html">注册</a>
                     </div>
                 </div>
+                <ul class="alreadyLogin">
+                    <li><i class="iconfont icon-dingdan"></i> 我的订单</li>
+                    <li><i class="iconfont icon-icon-test"></i> 我的商城</li>
+                    <li><i class="iconfont icon-ren"></i> 账号中心</li>
+                </ul>
             </div>
             <!-- 下方导航栏 -->
             <div class="vp-head-mainbar-pc">
@@ -1499,6 +1504,7 @@
     <ul id="side-bar" class="nolocked">
         <li class="iconfont icon-gouwuchezhengpin">
             <div class="prompt"><span class="triangle"></span>购物车</div>
+            <span class="prodnum" style="visibility: visible;"></span>
         </li>
         <li class="iconfont icon-kefu">
             <div class="prompt"><span class="triangle"></span>小v客服</div>

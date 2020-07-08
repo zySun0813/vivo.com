@@ -116,6 +116,9 @@ dfn{
                 -o-transition: color .2s ease-in-out;
                 -moz-transition: color .2s ease-in-out;
                 transition: color .2s ease-in-out;
+                &:hover{
+                    color: #798484 !important;
+                }
                 
             }
             .vp-user-shopcart {
@@ -136,6 +139,33 @@ dfn{
                 }
                 .vp-user-register {
                     margin-left: 18px;
+                }
+            }
+        }
+        .alreadyLogin{
+            display: none;
+            width: 200px;
+            height: 150px;
+            transition: 2s;
+            position: absolute;            
+            right: 0px;
+            top: 32px;
+            color: #000 !important;
+            background-color: #fff;
+            li{
+                text-align: center;
+                font-size: 14px;
+                line-height: 50px;
+                height: 50px;
+                border-bottom: 1px solid #f2f2f2;
+                color: #000 !important;
+                cursor: pointer;
+                i{
+                    margin-right: 10px;
+                }
+                &:hover{
+                    color: #4566ff !important;
+                    background-color: #f7f7f5;
                 }
             }
         }
@@ -640,6 +670,24 @@ dfn{
             height: 12px;
             background: center center no-repeat url(https://shopstatic.vivo.com.cn/vivoshop/web/dist/img/common/sidebar-triangle_97f842e.png);
         }
+    }
+    .prodnum {
+        position: relative;
+        top: -50px;
+        z-index: 3;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        margin: 9px 0 0 26px;
+        padding: 0 2px;
+        min-width: 18px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #f51919;
+        visibility: hidden;
     }
    
 }
